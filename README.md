@@ -2,6 +2,6 @@
 
 ## Integrantes
 
-- cano76	Jorge
-- daniel_41407	Daniel
-- Jhonatan29#2195	Jhonatan
+- Jorge Cano Chuqui (Discord: cano76)
+- Daniel (Discord: daniel_41407)
+- Jhonatan Rodriguez Custodio (Discord: Jhonatan29#2195)
