@@ -114,10 +114,6 @@ def pregunta_1(df_ventas_limpio):
     etiqueta = f"En {ultimo_año}, las ventas subieron aproximadamente {porcentaje_aumento:.2f}% comparado con el {ultimo_año-1}."
     st.markdown(etiqueta)
 
-# Llamada a la función
-pregunta_1(df_ventas_limpio)
-
-st.markdown("<br><br>", unsafe_allow_html=True)
 
 def pregunta_2(df_ventas_limpio):
     # Crea una copia de df_ventas_limpio
@@ -172,11 +168,6 @@ def pregunta_2(df_ventas_limpio):
     etiqueta = f"Los datos indican que los productos que generan mayor ganancia son del departamento {departamento_mayor_ganancia}."
     st.markdown(etiqueta)
 
-# Llamada a la función
-pregunta_2(df_ventas_limpio)
-
-st.markdown("<br><br>", unsafe_allow_html=True)
-
 
 def pregunta_3(df_ventas_limpio):
     # Crea una copia de la base df_ventas_limpio en un nuevo dataframe df_ventas_año_region
@@ -229,10 +220,6 @@ def pregunta_3(df_ventas_limpio):
     # Mostrar el texto adicional en Streamlit
     st.write(suma_porcentajes_text)
 
-# Llamada a la función
-pregunta_3(df_ventas_limpio)
-
-st.markdown("<br><br>", unsafe_allow_html=True)
 
 def pregunta4(df_ventas_limpio):
     # Crea una copia de df_ventas_limpio
@@ -270,10 +257,6 @@ def pregunta4(df_ventas_limpio):
     # Mostrar el texto adicional en Streamlit
     st.write(texto_adicional)
 
-# Llamada a la función
-pregunta4(df_ventas_limpio)
-
-st.markdown("<br><br><br><br>", unsafe_allow_html=True)
 
 def pregunta_5(df_ventas_limpio):
     # Filtrar filas donde el estado sea Sao Paulo
@@ -343,10 +326,6 @@ def pregunta_5(df_ventas_limpio):
     # Mostrar el gráfico en Streamlit
     st.pyplot(fig)
 
-# Llamada a la función
-pregunta_5(df_ventas_limpio)
-
-st.markdown("<br><br><br>", unsafe_allow_html=True)
 
 def pregunta6(df_ventas_limpio):
     # Paso 1: Preparación de los datos
@@ -383,5 +362,48 @@ def pregunta6(df_ventas_limpio):
     # Mostrar el gráfico en Streamlit
     st.pyplot(fig)
 
-# Llamada a la función
-pregunta6(df_ventas_limpio)
+
+
+# Pregunta 1
+st.subheader('Pregunta 1: Ventas totales por año')
+if st.button('Mostrar respuesta 1'):
+    pregunta_1(df_ventas_limpio)
+
+# Espaciado
+st.markdown("<br><br>", unsafe_allow_html=True)
+
+# Pregunta 2
+st.subheader('Pregunta 2: Top 7 de productos con mayor ganancia')
+if st.button('Mostrar respuesta 2'):
+    pregunta_2(df_ventas_limpio)
+
+# Espaciado
+st.markdown("<br><br>", unsafe_allow_html=True)
+
+# Pregunta 3
+st.subheader('Pregunta 3: Ventas por región')
+if st.button('Mostrar respuesta 3'):
+    pregunta_3(df_ventas_limpio)
+
+# Espaciado
+st.markdown("<br><br>", unsafe_allow_html=True)
+
+# Pregunta 4
+st.subheader('Pregunta 4: Métodos de envío más utilizados')
+if st.button('Mostrar respuesta 4'):
+    pregunta4(df_ventas_limpio)
+
+# Espaciado
+st.markdown("<br><br>", unsafe_allow_html=True)
+
+# Pregunta 5
+st.subheader('Pregunta 5: Ventas por trimestre en São Paulo')
+if st.button('Mostrar respuesta 5'):
+    pregunta_5(df_ventas_limpio)
+
+st.markdown("<br><br>", unsafe_allow_html=True)
+
+# Pregunta 6
+st.subheader('Pregunta 6: Productos más vendidos en el último trimestre')
+if st.button('Mostrar respuesta 6'):
+    pregunta6(df_ventas_limpio)
